@@ -1,0 +1,4 @@
+users_data/
+__pycache__/
+*.pyc
+.env
