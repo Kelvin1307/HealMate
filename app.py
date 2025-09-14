@@ -21,6 +21,11 @@ def load_all_user_data():
 def dashboard():
     return render_template('dashboard.html')
 
+@app.route("/health")
+def health():
+    return "OK", 200
+
+
 @app.route('/api/symptoms')
 def api_symptoms():
     all_data = load_all_user_data()
@@ -37,3 +42,5 @@ def api_symptoms():
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 10000)))
+
+
